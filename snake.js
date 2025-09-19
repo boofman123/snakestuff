@@ -86,8 +86,9 @@ function drawGame() {
     ctx.fillRect(food.x, food.y, box, box);
 
     // Draw snake
-    if (score >= 10) {
+    if (score >= 5) {
         ctx.fillStyle = "purple"; // Change color if score >= 10
+        snake.forEach(segment => ctx.fillRect(segment.x, segment.y, box, box));
     } else {
     ctx.fillStyle = "green";
     snake.forEach(segment => ctx.fillRect(segment.x, segment.y, box, box));
