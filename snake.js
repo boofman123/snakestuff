@@ -87,6 +87,11 @@ function drawGame() {
     // Draw snake
     ctx.fillStyle = "green";
     snake.forEach(segment => ctx.fillRect(segment.x, segment.y, box, box));
+
+    // Draw score
+    ctx.fillStyle = "black";
+    ctx.font = "20px Arial";
+    ctx.fillText(`Score: ${score}`, 10, 20); // Display score at the top-left corner
 }
 
 // Run game loop every 100ms
