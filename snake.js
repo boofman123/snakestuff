@@ -57,6 +57,7 @@ function updateGame() {
     // Check if food is eaten
     if (newHead.x === food.x && newHead.y === food.y) {
         score++;
+        document.getElementById("scoreContainer").textContent = `Score: ${score}`;
         food = { x: getRandomPosition(), y: getRandomPosition() };
     } else {
         snake.pop(); // Remove tail if no food is eaten
