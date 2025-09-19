@@ -86,13 +86,13 @@ function drawGame() {
     ctx.fillRect(food.x, food.y, box, box);
 
     // Draw snake
+    if (score >= 10) {
+        ctx.fillStyle = "purple"; // Change color if score >= 10
+    } else {
     ctx.fillStyle = "green";
     snake.forEach(segment => ctx.fillRect(segment.x, segment.y, box, box));
 
-    // Draw score
-    ctx.fillStyle = "blue";
-    ctx.font = "50px Arial";
-    ctx.fillText(`Score: ${score}`, 10, 20); // Display score at the top-left corner
+    }
 }
 
 // Run game loop every 100ms
