@@ -89,8 +89,8 @@ function drawGame() {
     snake.forEach(segment => ctx.fillRect(segment.x, segment.y, box, box));
 
     // Draw score
-    ctx.fillStyle = "black";
-    ctx.font = "20px Arial";
+    ctx.fillStyle = "blue";
+    ctx.font = "50px Arial";
     ctx.fillText(`Score: ${score}`, 10, 20); // Display score at the top-left corner
 }
 
